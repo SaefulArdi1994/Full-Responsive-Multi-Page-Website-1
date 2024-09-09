@@ -6,6 +6,8 @@
     
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -13,9 +15,10 @@
     <section class="header">
         <nav>
             <a href="index.html">
-                <img src="img/sustainability_12014771.png" alt="">
+                <h1 class="logo">Logo</h1>
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-solid fa-x" onclick="hideMenu()"></i>
                 <ul>
                     <li>
                         <a href="">Home</a>
@@ -34,6 +37,7 @@
                     </li>
                 </ul>
             </div>
+            <i class="fa fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
 
         <div class="text-box">
@@ -44,9 +48,23 @@
                 adipisci incidunt quas dolore iure dicta eos quod asperiores 
                 velit, id, repellat tenetur quo eum obcaecati?
             </p>
-            <a href="">Visit Us To Know More!</a>
+            <a href="" class="hero-btn">Visit Us To Know More!</a>
         </div>
     </section>
+
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px"
+        }
+
+    </script>
     
 </body>
 </html>
